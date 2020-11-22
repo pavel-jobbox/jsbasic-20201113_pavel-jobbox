@@ -6,10 +6,10 @@ function print(text) {
 function isValid(name) {
   let space = name.includes(' ');
 
-  if (name.length > 4 && space != true) {
-    return true;
-  } else {
+  if (name.length < 4 || space == true) {
     return false;
+  } else {
+    return true;
   }
 }
 
