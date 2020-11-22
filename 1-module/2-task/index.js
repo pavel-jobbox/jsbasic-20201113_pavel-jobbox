@@ -7,7 +7,9 @@ function isValid(name) {
   let space = name.includes(' ');
 
   if (name.length > 4 && space != true) {
-    return true
+    return true;
+  } else {
+    return false;
   }
 }
 
