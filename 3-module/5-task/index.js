@@ -4,15 +4,17 @@
  * @returns {{min:number, max:number}}  объект
  */
 function getMinMax(str) {
-  str = str.split(' ').filter(item => parseFloat(item)).map((index) => index.replace(/,/, ''))
 
-  let arr = []
-  for (let i in str) {
-    arr.push(Number(str[i]))
-  }
+  const err = [];
 
-  return {
-    min: Math.min(...arr),
-    max: Math.max(...arr)
+  str.split(' ').map((val) => parseFloat(val)).filter(val => {
+    if (isNaN(val) != isNaN(NaN)) {
+      err.push(Number(val))
+    }
+  });
+
+  return result = {
+    min: Math.min(...err),
+    max: Math.max(...err)
   }
 }
