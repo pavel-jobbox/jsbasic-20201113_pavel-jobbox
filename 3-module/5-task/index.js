@@ -8,7 +8,7 @@ function getMinMax(str) {
   const nums = str.split(' ').map((val) => parseFloat(val)).filter(num => !Number.isNaN(num));
 
   return result = {
-    min: Math.min(...nums),
-    max: Math.max(...nums)
+    min: Math.min.apply(null, nums),
+    Max: Math.max.apply(null, nums),
   }
 }
