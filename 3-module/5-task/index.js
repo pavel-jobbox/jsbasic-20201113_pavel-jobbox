@@ -4,11 +4,16 @@
  * @returns {{min:number, max:number}}  объект
  */
 function getMinMax(str) {
+  let stringWithoutSpaces = str.split(' ').join();
+  let itemsDividedByComma = stringWithoutSpaces.split(',');
+  let numbersOnly = itemsDividedByComma.filter((item) => item !== '' && isFinite(item));
 
-  const nums = str.split(' ').map((val) => parseFloat(val)).filter(num => !Number.isNaN(num));
+  let max = Math.max(...numbersOnly);
+  let min = Math.min(...numbersOnly);
 
-  return result = {
-    min: Math.min.apply(null, nums),
-    Max: Math.max.apply(null, nums),
-  }
+
+  return {
+    min,
+    max
+  };
 }
