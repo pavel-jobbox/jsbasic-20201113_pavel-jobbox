@@ -14,7 +14,7 @@ function getMinMax(str) {
   });
 
   return  result = {
-      min: Math.min.apply(null, err),
-      max: Math.max.apply(null, err)
+      min: Math.min(...err),
+      max: Math.max(...err)
   }  
 }
