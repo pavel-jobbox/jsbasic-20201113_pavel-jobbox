@@ -3,5 +3,5 @@
  * @returns {string[]}  объект
  */
 function namify(users) {
-  // ваш код...
+  return nameArr = users.map(val => { return val.name})
 }
