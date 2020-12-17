@@ -9,9 +9,6 @@ const THIRD_COLUMN = 3;
 
 function highlight(table) {
   const actions = {
-
-
-
     [THIRD_COLUMN]: (root, td) => {
       if (td.dataset.available === 'true') {
         root.classList.toggle('available', true);
@@ -21,9 +18,6 @@ function highlight(table) {
         root.hidden = true;
       }
     },
-
-
-
     [SECOND_COLUMN]: (root, td) => {
       if (td.textContent === 'm') {
         root.classList.toggle('male', true);
@@ -31,10 +25,6 @@ function highlight(table) {
         root.classList.toggle('female', true);
       }
     },
-
-
-
-
     [FIRST_COLUMN]: (root, td) => {
       const age = parseInt(td.textContent, 10);
 
@@ -43,9 +33,6 @@ function highlight(table) {
       }
     },
   };
-
-
-
 
   for (const tr of table.rows) {
     Array.from(tr.cells).forEach((td, index) => {
